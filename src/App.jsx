@@ -1,3 +1,5 @@
+import Card from "./components/Card"
+import Modal from "./components/Modal"
 import { useState, useEffect } from "react";
 import { fetchPokemonList, fetchPokemonData } from "./utils/function.js";
 
