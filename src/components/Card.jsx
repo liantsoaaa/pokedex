@@ -10,7 +10,6 @@ const Card = ({ pokemon }) => {
 
   return (
     <div className="p-4 h-full flex flex-col justify-between bg-white/10 rounded-xl relative">
-      {/* Conteneur d'image centré */}
       <div className="flex justify-center items-center h-full">
         {imageUrl ? (
           <img
@@ -25,7 +24,6 @@ const Card = ({ pokemon }) => {
         )}
       </div>
 
-      {/* Nom en haut (chevauchement) */}
       <div className="absolute top-3 left-0 right-0">
         <div className="bg-black/40 rounded-r-full py-1 px-4 inline-block max-w-[80%]">
           <h2 className="text-lg font-bold text-white capitalize truncate">
@@ -34,7 +32,6 @@ const Card = ({ pokemon }) => {
         </div>
       </div>
 
-      {/* ID en bas (chevauchement) */}
       <div className="absolute bottom-3 right-0">
         <div className="bg-black/40 rounded-l-full py-1 px-4 inline-block">
           <span className="text-white font-medium text-sm">

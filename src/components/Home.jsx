@@ -32,7 +32,7 @@ function Home() {
     const [searchQuery, setSearchQuery] = useState("");
     const [loading, setLoading] = useState(true);
     const navigate = useNavigate();
-    const [showListModal, setShowListModal] = useState(false); // Nom de variable plus clair
+    const [showListModal, setShowListModal] = useState(false);
 
     useEffect(() => {
         const fetchAllData = async () => {

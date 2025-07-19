@@ -18,7 +18,6 @@ export const fetchPokemonData = async (url) => {
   }
 }
 
-// Nouvelle fonction pour charger un Pokémon par ID
 export const fetchPokemonById = async (id) => {
   try {
     const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`);
