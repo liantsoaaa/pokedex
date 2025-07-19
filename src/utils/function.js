@@ -1,21 +1,28 @@
 import axios from "axios";
 
-export const fetchPokemonList = async (url, setPokemonList) => {
+export const fetchPokemonList = async (url) => {
   try {
     const response = await axios.get(url);
-    const results = response.data.results;
-    setPokemonList(results);
+    return response.data.results;
   } catch (error) {
     throw new Error(error);
   }
 }
 
-export const fetchPokemonData = async (url, index, setPokemonData) => {
+export const fetchPokemonData = async (url) => {
   try {
-    const URL = url + "/" + index;
-    const response = await axios.get(URL);
-    const results = await response.data;
-    setPokemonData(results);
+    const response = await axios.get(url);
+    return response.data;
+  } catch (error) {
+    throw new Error(error);
+  }
+}
+
+// Nouvelle fonction pour charger un Pokémon par ID
+export const fetchPokemonById = async (id) => {
+  try {
+    const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`);
+    return response.data;
   } catch (error) {
     throw new Error(error);
   }

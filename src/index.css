@@ -1,2 +1,85 @@
 @import "tailwindcss";
 @plugins "daisyui";
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f3f4f6;
+}
+
+@layer components {
+.pokemon-grid {
+    @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6;
+}
+
+.search-bar {
+    @apply flex items-center bg-gray-200 rounded-full shadow-md overflow-hidden;
+}
+
+.search-icon {
+    @apply pl-4 pr-2 text-gray-600;
+}
+
+.reset-button {
+    @apply bg-gray-300 hover:bg-gray-400 p-3 h-full flex items-center transition-colors;
+}
+
+.pokemon-card {
+    @apply rounded-xl overflow-hidden shadow-lg transform transition-transform duration-300 hover:scale-105;
+}
+}
+
+@layer components {
+.stat-bar {
+    @apply w-full bg-gray-700 rounded-full h-2;
+}
+
+.stat-fill {
+    @apply bg-emerald-500 h-2 rounded-full;
+}
+
+.detail-card {
+    @apply bg-gray-900/50 p-4 rounded-xl;
+}
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.pokemon-card {
+    animation: fadeIn 0.3s ease-out;
+}
+
+.pokemon-card-container {
+    height: 240px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+@keyframes fadeIn {
+from { 
+    opacity: 0; 
+    transform: translateY(10px) scale(0.95); 
+}
+to { 
+    opacity: 1; 
+    transform: translateY(0) scale(1); 
+}
+}
+
+.pokemon-card {
+    animation: fadeIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.center-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pokemon-grid {
+    display: grid;
+    place-items: center;
+}
